@@ -4,3 +4,7 @@ shards:
     github: ragmaanir/microtest
     commit: 2ecb26280d25d7b040c6630b9e12cc2f90d70556
 
+  stdimp:
+    github: willamin/stdimp
+    commit: 513db15f280d99b16c8c00cb15eeb8ff170f1b01
+

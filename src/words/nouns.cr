@@ -1,0 +1,24 @@
+Namer::NOUNS = %w(
+  cloud
+  rain
+  water
+  fire
+  sky
+  earth
+  rock
+  room
+  door
+  tower
+  ring
+  orb
+  arrow
+  brain
+  foot
+  hand
+  head
+  ear
+  eye
+  tree
+  vine
+  heart
+)
