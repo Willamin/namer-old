@@ -19,4 +19,14 @@ Namer::ADJECTIVES = %w(
   violent
   calm
   extreme
+  first
+  second
+  third
+  fourth
+  fifth
+  sixth
+  seventh
+  eighth
+  ninth
+  tenth
 )

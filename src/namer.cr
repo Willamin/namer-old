@@ -14,4 +14,10 @@ module Namer
   end
 end
 
-Namer.generate.puts
+unless (ARGV & %w(-c --continuous)).empty?
+  loop do
+    Namer.generate.puts
+  end
+else
+  Namer.generate.puts
+end
