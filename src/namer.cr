@@ -6,11 +6,8 @@ module Namer
 
   extend self
 
-  def generate(glue : String = " ")
-    noun = NOUNS.shuffle.first
-    adj = ADJECTIVES.shuffle.first
-
-    [adj, noun].join(glue)
+  def generate(pattern : Array(Array(String)), glue : String = " ")
+    pattern.map(&.shuffle.first).join(glue)
   end
 end
 
@@ -37,11 +34,16 @@ end
 
 continuous = has_arg(%w(-c --continuous))
 
+pattern = [Namer::ADJECTIVES, Namer::NOUNS]
+if has_arg(%w(-f --four))
+  pattern = [Namer::ADVERBS, Namer::VERBS, Namer::ADJECTIVES, Namer::NOUNS]
+end
+
 loop do
   if has_arg(%w(-k --kebab))
-    Namer.generate("-").puts
+    Namer.generate(pattern, glue: "-").puts
   else
-    Namer.generate.puts
+    Namer.generate(pattern).puts
   end
 
   break if !continuous

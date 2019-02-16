@@ -1,0 +1,3 @@
+Namer::ADVERBS = %w(
+  quickly
+)
